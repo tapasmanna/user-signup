@@ -118,7 +118,7 @@ class MainHandler(webapp2.RequestHandler):
 
 
     	if v_user and v_pas and v_pasw :
-    		self.redirect("/welcome")
+    		self.redirect("/welcome?username=" + user)
     	else:
     		self.write_form(cgi.escape(user), cgi.escape(mail), e_user, e_pas, e_pasw, e_email)
 
